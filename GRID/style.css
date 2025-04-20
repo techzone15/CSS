@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	box-sizing: border-box;
+}
+.container{
+	background: red;
+	margin: auto;
+	min-height: 100vh;
+	max-width: 500px;
+	display: grid;
+	align-content: start;
+	 /* minmax() used with css grid */
+	/* grid-template-columns:  repeat(auto-fit, minmax(15rem, 1fr)); */
+	/* grid-template-columns:  repeat(auto-fit, minmax(min(15rem, 100%), 1fr)); */
+	/* fr is fractional unit. 1fr is for 1 part of the available space */
+	/* grid-template-columns: 2fr;	*/
+	
+	/* The minmax() CSS function defines a size range greater than or equal to min and less than or equal to max. */
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));	
+	
+	gap: 1rem;
+}
+.container div{
+	background: green;
+	height: 10rem;
+	text-align: center;
+	line-height: 10rem;
+	color: #fff;
+	font-size: 2rem;
+}
+.container div:first-child{
+	/* width: 20rem; */
+}
+.container2{
+	max-width: 800px;
+	height: 50vh;
+	margin: auto;
+}
+.container2 div{
+	margin-top: 10px;
+	background: green;
+	width: 150px;
+	height: 10rem;
+}
